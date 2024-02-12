@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Mulish:wght@500');
 
 :root {
   /* 色 */
@@ -18,8 +18,8 @@
   --green-dark: #1d926b;
 
   /* typography */
-  --headingFont: 'Inconsolata', monospace;
-  --bodyFont: 'Montserrat', sans-serif;
+  --headingFont: 'Cabin';
+  --bodyFont: 'Poppins', sans-serif;
   --smallText: 0.7em;
   /* 残り */
   --backgroundColor: var(--grey-50);
@@ -209,6 +209,11 @@ textarea {
   width: auto;
 }
 
+.task-edit-id {
+  font-size: small;
+  color: rgb(149, 149, 149);
+}
+
 .single-task-form .form-alert {
   text-align: center;
   margin-top: 1rem;
@@ -239,7 +244,7 @@ textarea {
 
 .back-link {
   display: block;
-  width: 250px;
+  width: 200px;
   margin: 0 auto;
   text-align: center;
   margin-top: 6rem;

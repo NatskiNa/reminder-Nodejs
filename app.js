@@ -8,12 +8,13 @@ const port = 8000;
 
 const app = express();
 app.use(express.json());
+//import HTML file from public folder
 app.use(express.static('./public/'));
 
-//Routing
+//Routing(api endpoint)
 app.use('/api/v1/tasks/', taskRouter);
 
-//connect to database
+//connect to mongoDB server
 const start = async () => {
   try {
     await connectDB(process.env.MONGO_URL);

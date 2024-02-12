@@ -4,7 +4,7 @@ const taskInputDOM = document.querySelector('.task-input');
 const formAlertDOM = document.querySelector('.form-alert');
 
 const showTasks = async () => {
-  //get tasks from spi/v1/tasks
+  //get tasks from api/v1/tasks
   try {
     const { data: tasks } = await axios.get('/api/v1/tasks');
 
@@ -31,7 +31,7 @@ const showTasks = async () => {
       </div>
     </div>`;
       })
-      .join('');
+      .join(''); //remove unwanted comma
     tasksDOM.innerHTML = allTasks;
   } catch (err) {
     console.log(err);
