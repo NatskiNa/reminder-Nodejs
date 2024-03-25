@@ -17,7 +17,7 @@ app.use('/api/v1/tasks/', taskRouter);
 //connect to mongoDB server
 const start = async () => {
   try {
-    await connectDB(process.env.MONGO_URL);
+    await connectDB(process.env.MONGO_HEROKU_URL || process.env.MONGO_URL);
     app.listen(process.env.port || port, console.log('Server is running'));
   } catch (err) {
     console.log(err);
